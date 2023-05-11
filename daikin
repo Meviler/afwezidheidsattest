@@ -1,0 +1,70 @@
+line = (":----------------------------------------------------------------------------:")
+
+header_title = (": INDIENEN AFWEZIGHEIDSATTEST BIJ HR / SUBMISSION OF THE ABSENCE CERTIFICATE :")
+print (header_title.upper())
+print (line)
+
+while True:
+    name = input("Your first name: ")
+    if not name or name.isdigit():
+        print("Enter your first name")
+    else:
+        break
+
+while True:
+    family_name = input("Your family name: ")
+    if not family_name or family_name.isdigit():
+        print("Enter your family name")
+    else:
+        break
+
+while True:
+    pers_num = input("Your personnel number: ")
+    if not pers_num or not pers_num.isdigit():
+        print("Enter your personnel number")
+    else:
+        break
+
+while True:
+    collar = input("Are you (Arbeider/Bediender)? ")
+    if collar.lower() == "a":
+        collar_type = "Arbeider"
+        break
+    elif collar.lower() == "b":
+        collar_type = "Bediender"
+        break
+    elif not collar or collar.isdigit():
+        print("Enter your collar (A/B)")
+    else:
+        print("Invalid input")
+
+while True:
+    phone_num = input("Your phone number: ")
+    if not phone_num or len(phone_num) != 10 or not phone_num.startswith("0") or not phone_num.isdigit():
+        print("Enter a valid phone number (10 digits starting with 0)")
+    else:
+        break
+
+while True:
+    return_email = input("Your email: ")
+    if not return_email or "@" not in return_email:
+        print("Enter a valid email address")
+    else:
+        break
+
+information_list = [name, family_name, pers_num, collar_type, phone_num, return_email]
+
+print(line +"\nYour information:")
+print(information_list)
+
+print("""
+
+      *******       *******     **   **    **    **    ***     **
+     /**      **  /**      **  /**  /**  /**    /**   /**  *  /**
+     /**      **  /**********  /**  /******     /**   /**  /* /**
+     /**      **  /**      **  /**  /**// **    /**   /**   /* **
+     /********    /**      **  /**  /**   /**   /**   /**   /****
+     ///////      ///      //  ///  ///    ///  ///   ///   ////
+
+""")
+
